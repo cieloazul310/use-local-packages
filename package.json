@@ -1,0 +1,30 @@
+{
+  "name": "@my-monorepo/web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "panda codegen && astro build",
+    "build:fast": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "panda": "panda"
+  },
+  "dependencies": {
+    "@my-monorepo/core": "./plugins/my-monorepo-core-0.0.1.tgz",
+    "astro": "^3.2.0"
+  },
+  "devDependencies": {
+    "@pandacss/astro": "^0.15.4",
+    "@pandacss/dev": "^0.15.4",
+    "eslint": "^8.50.0",
+    "typescript": "^5.2.2"
+  },
+  "optionalDependencies": {
+    "@my-monorepo/button": "./plugins/my-monorepo-button-0.0.1.tgz",
+    "@my-monorepo/preset-base": "./plugins/my-monorepo-preset-base-0.0.1.tgz",
+    "@my-monorepo/some-component": "./plugins/my-monorepo-some-component-0.0.1.tgz"
+  }
+}

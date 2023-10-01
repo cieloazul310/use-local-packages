@@ -1,0 +1,44 @@
+---
+import { css } from "@my-monorepo/ui-lib/css";
+import { center } from "@my-monorepo/ui-lib/patterns";
+import { buttonRecipe } from "@my-monorepo/ui-lib/recipes";
+import { SomeComponent, UsePresetToken } from "@my-monorepo/core";
+import Layout from "../layout/index.astro";
+
+const h2Style = css({ fontSize: "2xl", mb: 4 });
+---
+
+<Layout>
+  <h1 class={css({ fontSize: "4xl" })}>Hello, Astro!</h1>
+  <p>This is Astro components library example built with Panda CSS.</p>
+  <section class={css({ layerStyle: "box", p: 8 })}>
+    <h2 class={h2Style}>Button recipes</h2>
+    <div class={center({ gap: 2 })}>
+      <button class={buttonRecipe()}>Funky</button>
+      <button class={buttonRecipe({ visual: "edgy" })}>Edgy</button>
+      <button class={buttonRecipe({ size: "lg" })}>Size-lg</button>
+      <button class={buttonRecipe({ shape: "square" })}>Shape-square</button>
+    </div>
+  </section>
+  <!--
+  <section>
+    <h2 class={h2Style}>Button components</h2>
+    <div class={center({ gap: 2 })}>
+      <Button>Funky</Button>
+      <Button visual="edgy">Edgy</Button>
+      <Button size="lg">Size-lg</Button>
+      <Button shape="square">Shape-square</Button>
+    </div>
+  </section>
+   -->
+  <section class={css({ layerStyle: "box", p: 8 })}>
+    <h2 class={h2Style}>Some component</h2>
+    <SomeComponent />
+  </section>
+  <section class={css({ layerStyle: "box", p: 8 })}>
+    <h2 class={h2Style}>With base-preset token</h2>
+    <UsePresetToken title="Bel canto">
+      <p>Hi, bel canto.</p>
+    </UsePresetToken>
+  </section>
+</Layout>

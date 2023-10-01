@@ -1,0 +1,22 @@
+---
+import { css } from "@my-monorepo/ui-lib/css";
+import { vstack } from "@my-monorepo/ui-lib/patterns";
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>Panda Astro Components</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div class={css({ maxWidth: "breakpoint-md", m: "auto" })}>
+      <main class={vstack({ gap: 8, alignItems: "stretch", p: 4 })}>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
